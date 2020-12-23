@@ -74,7 +74,7 @@ $macros = ParseMacros($iniFile, IniRead($iniFile, 'General', 'MacroSectionPrefix
 ExitOnCondition($macros.Count = 0, 'There is no macro data in config')
 
 While 1
-    ExitOnCondition(IsPositiveInteger($timeLimit) And $totalTime >= $timeLimit Or IsPositiveInteger($maxItems) And $totalItems >= $maxItems, 'Finished!')
+    ExitOnCondition((IsPositiveInteger($timeLimit) And $totalTime >= $timeLimit) Or (IsPositiveInteger($maxItems) And $totalItems >= $maxItems), 'Finished!')
     ExitOnCondition(Not _WinAPI_GetKeyState(0x90), 'Numlock is disabled')
 
     SendControlAndSleep($hWin, $winName, '{NUMPAD0}', 1)
