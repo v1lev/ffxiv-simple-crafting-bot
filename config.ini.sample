@@ -1,0 +1,17 @@
+[General]
+MacroSectionPrefix=Macro
+WindowName=FINAL FANTASY XIV
+;either time or item limit should be specified, or both
+;execution time limit in seconds
+;TimeLimit=3600
+;amount of items to craft
+;MaxItems=50
+
+;macros will be used sequentially, after pressing a button [Key] script will wait [Time] seconds
+[Macro1]
+Key={1}
+Time=3
+
+[Macro2]
+Key={1}
+Time=1
