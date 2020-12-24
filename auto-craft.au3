@@ -77,9 +77,9 @@ While 1
     ExitOnCondition((IsPositiveInteger($timeLimit) And $totalTime >= $timeLimit) Or (IsPositiveInteger($maxItems) And $totalItems >= $maxItems), 'Finished!')
     ExitOnCondition(Not _WinAPI_GetKeyState(0x90), 'Numlock is disabled')
 
-    SendControlAndSleep($hWin, $winName, '{NUMPAD0}', 1)
-    SendControlAndSleep($hWin, $winName, '{NUMPAD0}', 1)
-    SendControlAndSleep($hWin, $winName, '{NUMPAD0}', 1)
+    For $i = 0 To 4
+        SendControlAndSleep($hWin, $winName, '{NUMPAD0}', 1)
+    Next
 
     For $i = 0 To $macros.Count - 1
         $item = $macros.Item($i)
